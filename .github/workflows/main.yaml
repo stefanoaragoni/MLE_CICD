@@ -23,13 +23,13 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run data collection
-      run: python recopilar_datos.py
+      run: python scripts/recopilar_datos.py
 
     - name: Run preprocessing
-      run: python preprocesar.py
+      run: python scripts/preprocesar.py
 
     - name: Train model
-      run: python entrenar_modelo.py
+      run: python scripts/entrenar_modelo.py
 
     - name: Evaluate model
-      run: python evaluar_modelo.py
+      run: python scripts/evaluar_modelo.py
