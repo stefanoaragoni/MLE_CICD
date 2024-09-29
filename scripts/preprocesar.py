@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 # Cargar y preprocesar el dataset
 def preprocesar():
     # Cargar el dataset
-    df = pd.read_csv('data/iris.csv')
+    df = pd.read_csv('./data/iris.csv')
     X = df.drop('target', axis=1)
     y = df['target']
     
@@ -19,10 +19,10 @@ def preprocesar():
     X_test_scaled = scaler.transform(X_test)
 
     # Guardar los datos preprocesados
-    pd.DataFrame(X_train_scaled).to_csv('data/X_train.csv', index=False)
-    pd.DataFrame(X_test_scaled).to_csv('data/X_test.csv', index=False)
-    pd.DataFrame(y_train).to_csv('data/y_train.csv', index=False)
-    pd.DataFrame(y_test).to_csv('data/y_test.csv', index=False)
+    pd.DataFrame(X_train_scaled).to_csv('./data/X_train.csv', index=False)
+    pd.DataFrame(X_test_scaled).to_csv('./data/X_test.csv', index=False)
+    pd.DataFrame(y_train).to_csv('./data/y_train.csv', index=False)
+    pd.DataFrame(y_test).to_csv('./data/y_test.csv', index=False)
 
 if __name__ == "__main__":
     preprocesar()

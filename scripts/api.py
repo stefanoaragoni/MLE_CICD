@@ -6,7 +6,7 @@ import pandas as pd
 app = Flask(__name__)
 
 def cargar_modelo():
-    with open('model/modelo_decision_tree.pkl', 'rb') as file:
+    with open('./model/modelo_decision_tree.pkl', 'rb') as file:
         return pickle.load(file)
 
 @app.route('/predict', methods=['POST'])
@@ -23,7 +23,7 @@ def predict():
 
 if __name__ == "__main__":
     # Leer el accuracy del modelo
-    with open('data/accuracy.txt', 'r') as f:
+    with open('./data/accuracy.txt', 'r') as f:
         accuracy = float(f.read().strip())
 
     # Iniciar el servidor solo si el accuracy es mayor a 0.7
