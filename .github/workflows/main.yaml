@@ -33,3 +33,7 @@ jobs:
 
     - name: Evaluate model
       run: python scripts/evaluar_modelo.py
+
+    - name: Start API if accuracy is sufficient
+      run: python scripts/api.py
+
