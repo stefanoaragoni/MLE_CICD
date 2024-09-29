@@ -1,0 +1,35 @@
+name: ML Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run data collection
+      run: python recopilar_datos.py
+
+    - name: Run preprocessing
+      run: python preprocesar.py
+
+    - name: Train model
+      run: python entrenar_modelo.py
+
+    - name: Evaluate model
+      run: python evaluar_modelo.py
