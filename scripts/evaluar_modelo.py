@@ -2,8 +2,16 @@
 import pandas as pd
 from sklearn.metrics import accuracy_score
 import pickle
+import os
 
 def evaluar_modelo():
+
+    # Crear la carpeta 'data' si no existe
+    os.makedirs('data', exist_ok=True)
+
+    # Crear la carpeta 'model' si no existe
+    os.makedirs('model', exist_ok=True)
+
     X_test = pd.read_csv('./data/X_test.csv')
     y_test = pd.read_csv('./data/y_test.csv').values.ravel()
 

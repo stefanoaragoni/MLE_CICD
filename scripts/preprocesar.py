@@ -1,10 +1,15 @@
 # Importar librerías necesarias
+import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 # Cargar y preprocesar el dataset
 def preprocesar():
+
+    # Crear la carpeta 'data' si no existe
+    os.makedirs('data', exist_ok=True)
+
     # Cargar el dataset
     df = pd.read_csv('./data/iris.csv')
     X = df.drop('target', axis=1)
