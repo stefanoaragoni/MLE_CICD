@@ -28,6 +28,10 @@ if __name__ == "__main__":
 
     # Iniciar el servidor solo si el accuracy es mayor a 0.7
     if accuracy > 0.7:
-        app.run(host='0.0.0.0', port=5000)
+        #app.run(host='0.0.0.0', port=5000)
+
+        print("Se llama a algún otro servicio para iniciar el servidor.")
+        print("Esto es solo un ejemplo.")
+
     else:
         print("El modelo no cumple con el requisito de accuracy.")
