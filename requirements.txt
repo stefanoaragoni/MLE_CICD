@@ -1,0 +1,18 @@
+# Librerías para manipulación de datos
+pandas
+numpy
+ydata-profiling
+
+# Librerías para visualización
+matplotlib
+seaborn
+
+# Librerías para preprocesamiento / limpieza de datos
+scikit-learn
+
+# Librerías para modelado
+pickle-mixin
+
+# Configuraciones adicionales
+flask
+requests
