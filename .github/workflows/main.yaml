@@ -37,6 +37,3 @@ jobs:
     - name: Start API if accuracy is sufficient
       run: python scripts/api.py
 
-    - name: Empaquetar codigo
-      run: python empaquetar.py
-

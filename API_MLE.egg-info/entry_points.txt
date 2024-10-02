@@ -1,0 +1,2 @@
+[console_scripts]
+nombre_del_comando = API_MLE.scripts.api:main

@@ -1,0 +1,9 @@
+pandas
+numpy
+ydata-profiling
+matplotlib
+seaborn
+scikit-learn
+pickle-mixin
+flask
+requests
